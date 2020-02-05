@@ -6,18 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.318"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.223" />
-
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/FABAccion"
         android:layout_width="wrap_content"
@@ -45,43 +33,33 @@
         app:layout_constraintTop_toTopOf="parent"
         app:titleTextColor="@color/colorAccent" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="208dp"
-        android:text="Button"
-        android:background="@drawable/mi_boton"
-        android:textColor="#FFF"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_img"
+        android:layout_width="311dp"
+        android:layout_height="281dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="16dp"
+        app:cardBackgroundColor="@color/cardview_light_background"
+        app:contentPadding="26dp"
+        app:cardCornerRadius="16dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.52"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.13999999">
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="208dp"
-        android:layout_marginEnd="37dp"
-        android:text="Button"
-        android:background="@drawable/boton_2"
-        app:layout_constraintEnd_toStartOf="@+id/button"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/noche" />
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="130dp"
-        android:layout_height="130dp"
-        android:layout_marginStart="76dp"
-        android:layout_marginTop="20dp"
-        android:drawableTop="@drawable/ic_dibujo"
-        android:background="@drawable/boton_circular"
-        android:text="Button"
-        android:textColor="#FFF"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mi CardView" />
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,10 +10,14 @@ import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
 
 
+
 import androidx.annotation.RequiresApi
+import androidx.cardview.widget.CardView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity() {
+
 
     @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,6 +33,12 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(applicationContext,"pulsado el boton FAB",
                 Toast.LENGTH_LONG).show()
         })
+        // traer la referencia a CardView
+        val card:CardView =findViewById(R.id.card_img)
+        card.setOnClickListener({
+            Snackbar.make(it,"click sobre el card",Snackbar.LENGTH_LONG).show()
+        })
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
